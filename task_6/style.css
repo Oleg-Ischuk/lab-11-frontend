@@ -1,0 +1,20 @@
+body{
+    caret-color: transparent;
+}
+.container {
+    width: 800px;
+    height: 600px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.active {
+    outline: 3px solid rgb(0, 0, 0);
+}
