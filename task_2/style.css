@@ -1,7 +1,7 @@
 button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -39,7 +39,7 @@ body {
 }
 
 body.fullscreen {
-  background-color: #333; 
+  background-color: #333;
   color: white;
 }
 
@@ -51,12 +51,12 @@ body.fullscreen {
 }
 
 #gallery img {
-  width: 500px; 
+  width: 500px;
   height: 300px;
 }
 
 .exit-btn {
-  display: none; 
+  display: none;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -67,7 +67,7 @@ body.fullscreen {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 9999; 
+  z-index: 9999;
 }
 
 .exit-btn:hover {
@@ -75,9 +75,16 @@ body.fullscreen {
 }
 
 body.fullscreen .exit-btn {
-  display: block; 
+  display: block;
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 9999; 
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  #gallery img {
+    width: 100%;
+    height: auto;
+  }
 }

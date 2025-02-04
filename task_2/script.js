@@ -3,7 +3,7 @@ const fullscreenBtn = document.getElementById("fullscreenBtn");
 const exitFullscreenBtn = document.getElementById("exitFullscreenBtn");
 const gallery = document.getElementById("gallery");
 
-// Функція для отримання і відображення зображень
+// Function to load images
 const loadImages = async () => {
   try {
     const response = await fetch("https://dog.ceo/api/breeds/image/random");
@@ -18,36 +18,30 @@ const loadImages = async () => {
   }
 };
 
-// Функція для переходу в повноекранний режим
+// Function to enter fullscreen mode
 const enterFullscreen = () => {
   if (gallery.requestFullscreen) {
     gallery.requestFullscreen();
   } else if (gallery.mozRequestFullScreen) {
-    // Firefox
-    gallery.mozRequestFullScreen();
+    gallery.mozRequestFullScreen(); // Firefox
   } else if (gallery.webkitRequestFullscreen) {
-    // Chrome, Safari, Opera
-    gallery.webkitRequestFullscreen();
+    gallery.webkitRequestFullscreen(); // Chrome, Safari, Opera
   } else if (gallery.msRequestFullscreen) {
-    // IE/Edge
-    gallery.msRequestFullscreen();
+    gallery.msRequestFullscreen(); // IE/Edge
   }
   document.body.classList.add("fullscreen");
 };
 
-// Функція для виходу з повноекранного режиму
+// Function to exit fullscreen mode
 const exitFullscreen = () => {
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.mozCancelFullScreen) {
-    // Firefox
-    document.mozCancelFullScreen();
+    document.mozCancelFullScreen(); // Firefox
   } else if (document.webkitExitFullscreen) {
-    // Chrome, Safari, Opera
-    document.webkitExitFullscreen();
+    document.webkitExitFullscreen(); // Chrome, Safari, Opera
   } else if (document.msExitFullscreen) {
-    // IE/Edge
-    document.msExitFullscreen();
+    document.msExitFullscreen(); // IE/Edge
   }
   document.body.classList.remove("fullscreen");
 };
