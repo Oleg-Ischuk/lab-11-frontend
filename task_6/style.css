@@ -1,20 +1,16 @@
-body{
-    caret-color: transparent;
-}
-.container {
-    width: 800px;
-    height: 600px;
-    border: 2px solid black;
-    position: relative;
-    overflow: hidden;
-    margin: 50px auto;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.circle {
-    position: absolute;
-    border-radius: 50%;
-}
-
-.active {
-    outline: 3px solid rgb(0, 0, 0);
+#location {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
