@@ -1,6 +1,7 @@
-body{
+body {
     caret-color: transparent;
 }
+
 .container {
     width: 800px;
     height: 600px;
@@ -13,6 +14,7 @@ body{
 .circle {
     position: absolute;
     border-radius: 50%;
+    transition: left 0.2s ease, top 0.2s ease; /* Smooth transition for circle movement */
 }
 
 .active {
