@@ -22,12 +22,19 @@ function startTimer() {
     }, 1000);
   }
 }
+
 function stopTimer() {
   if (intervalId) {
     clearInterval(intervalId);
     intervalId = null;
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  timerElement = document.getElementById('timer');
+  updateTimer();
+  startTimer();
+});
 
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
@@ -36,6 +43,3 @@ document.addEventListener('visibilitychange', () => {
     stopTimer();
   }
 });
-
-updateTimer();
-startTimer();
