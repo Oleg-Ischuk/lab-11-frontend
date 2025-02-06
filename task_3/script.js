@@ -25,8 +25,11 @@ function createImageElement(src) {
     saveGallery();
   });
 
+  // Error handler for image loading
   img.onerror = () => {
     img.src = "fallback-image.jpg"; // Placeholder for broken images
+    img.alt = "Image not available"; // Update alt text to indicate error
+    alert("The image could not be loaded. A placeholder image has been shown."); // Notify user about the broken image
   };
 
   return img;
